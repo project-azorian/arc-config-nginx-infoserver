@@ -18,7 +18,6 @@ spec:
       labels:
         app: nginx
     spec:
-      hostNetwork: true
       containers:
       - name: nginx
         image: soulard.azurecr.io/nginx:aods-demo
