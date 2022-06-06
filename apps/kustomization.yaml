@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - ingress
   - infoserver-namespace.yaml
   - infoserver-cm.yaml
   - infoserver-app.yaml

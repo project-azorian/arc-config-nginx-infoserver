@@ -83,7 +83,7 @@ spec:
           initialDelaySeconds: 5
           timeoutSeconds: 1
       volumes:
-      - name: nginx-config
+      - name: infoserver-config
         configMap:
-          name: nginx-config
+          name: infoserver-config
           defaultMode: 0555
