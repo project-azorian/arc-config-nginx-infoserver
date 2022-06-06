@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: nginx
+  name: infoserver
+  namespace: infoserver
   labels:
-    app: nginx
+    app: infoserver
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: infoserver
   template:
     metadata:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9113"
       labels:
-        app: nginx
+        app: infoserver
     spec:
       containers:
       - name: nginx
@@ -30,7 +30,7 @@ spec:
           - -g
           - daemon off;
         volumeMounts:
-          - name: nginx-config
+          - name: infoserver-config
             mountPath: /etc/nginx/conf.d/default.conf
             subPath: default.conf
       - name: catsay
