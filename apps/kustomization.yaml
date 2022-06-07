@@ -6,4 +6,5 @@ resources:
   - infoserver-cm.yaml
   - infoserver-app.yaml
   - infoserver-svc.yaml
+  - infoserver-ingress.yaml
   - azm-cm.yaml
